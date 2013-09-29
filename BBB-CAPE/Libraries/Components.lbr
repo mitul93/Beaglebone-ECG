@@ -123,6 +123,20 @@
 <package name="RECT_PAD">
 <smd name="P$1" x="0" y="0" dx="20" dy="20" layer="1"/>
 </package>
+<package name="SOIC-8">
+<wire x1="2" y1="2.5" x2="-2" y2="2.5" width="0.127" layer="51"/>
+<wire x1="-2" y1="2.5" x2="-2" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="-2" y1="-2.5" x2="2" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="2" y1="-2.5" x2="2" y2="2.5" width="0.127" layer="51"/>
+<smd name="P$2" x="-2.4" y="0.615" dx="1.4224" dy="0.7112" layer="1"/>
+<smd name="P$1" x="-2.4" y="1.885" dx="1.4224" dy="0.7112" layer="1"/>
+<smd name="P$3" x="-2.4" y="-0.615" dx="1.4224" dy="0.7112" layer="1"/>
+<smd name="P$4" x="-2.4" y="-1.885" dx="1.4224" dy="0.7112" layer="1"/>
+<smd name="P$8" x="2.4" y="1.885" dx="1.4224" dy="0.7112" layer="1"/>
+<smd name="P$7" x="2.4" y="0.615" dx="1.4224" dy="0.7112" layer="1"/>
+<smd name="P$6" x="2.4" y="-0.615" dx="1.4224" dy="0.7112" layer="1"/>
+<smd name="P$5" x="2.4" y="-1.885" dx="1.4224" dy="0.7112" layer="1"/>
+</package>
 </packages>
 <symbols>
 <symbol name="INA129">
@@ -183,6 +197,22 @@
 <wire x1="-10.16" y1="-7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
 <wire x1="-10.16" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
 <pin name="P$1" x="17.78" y="0" length="middle" rot="R180"/>
+</symbol>
+<symbol name="ADS1252">
+<wire x1="-22.86" y1="0" x2="-10.16" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="12.7" x2="15.24" y2="12.7" width="0.254" layer="94"/>
+<wire x1="15.24" y1="12.7" x2="15.24" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-12.7" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-12.7" x2="-22.86" y2="0" width="0.254" layer="94"/>
+<pin name="VIN+" x="-20.32" y="7.62" length="middle"/>
+<pin name="VIN-" x="-20.32" y="-7.62" length="middle"/>
+<pin name="V+" x="0" y="17.78" length="middle" rot="R270"/>
+<pin name="CLK" x="20.32" y="7.62" length="middle" rot="R180"/>
+<pin name="DOUT" x="20.32" y="0" length="middle" rot="R180"/>
+<pin name="SCLK" x="20.32" y="-7.62" length="middle" rot="R180"/>
+<pin name="GND" x="0" y="-17.78" length="middle" rot="R90"/>
+<pin name="VREF" x="7.62" y="-17.78" length="middle" rot="R90"/>
+<text x="-10.16" y="0" size="2.54" layer="94">ADS1252</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -276,6 +306,28 @@
 <device name="" package="RECT_PAD">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ADS1252">
+<gates>
+<gate name="G$1" symbol="ADS1252" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOIC-8">
+<connects>
+<connect gate="G$1" pin="CLK" pad="P$4"/>
+<connect gate="G$1" pin="DOUT" pad="P$5"/>
+<connect gate="G$1" pin="GND" pad="P$7"/>
+<connect gate="G$1" pin="SCLK" pad="P$6"/>
+<connect gate="G$1" pin="V+" pad="P$3"/>
+<connect gate="G$1" pin="VIN+" pad="P$1"/>
+<connect gate="G$1" pin="VIN-" pad="P$2"/>
+<connect gate="G$1" pin="VREF" pad="P$8"/>
 </connects>
 <technologies>
 <technology name=""/>
