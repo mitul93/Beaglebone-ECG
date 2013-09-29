@@ -137,6 +137,15 @@
 <smd name="P$6" x="2.4" y="-0.615" dx="1.4224" dy="0.7112" layer="1"/>
 <smd name="P$5" x="2.4" y="-1.885" dx="1.4224" dy="0.7112" layer="1"/>
 </package>
+<package name="SOT23-3">
+<wire x1="1.525" y1="0.875" x2="-1.525" y2="0.875" width="0.127" layer="51"/>
+<wire x1="-1.55" y1="0.875" x2="-1.55" y2="-0.875" width="0.127" layer="51"/>
+<wire x1="1.55" y1="0.875" x2="1.55" y2="-0.875" width="0.127" layer="51"/>
+<wire x1="1.525" y1="-0.875" x2="-1.525" y2="-0.875" width="0.127" layer="51"/>
+<smd name="P$1" x="-0.95" y="-1.15" dx="1.016" dy="0.508" layer="1" rot="R270"/>
+<smd name="P$2" x="0.95" y="-1.15" dx="1.016" dy="0.508" layer="1" rot="R270"/>
+<smd name="P$3" x="0" y="1.15" dx="1.016" dy="0.508" layer="1" rot="R270"/>
+</package>
 </packages>
 <symbols>
 <symbol name="INA129">
@@ -213,6 +222,26 @@
 <pin name="GND" x="0" y="-17.78" length="middle" rot="R90"/>
 <pin name="VREF" x="7.62" y="-17.78" length="middle" rot="R90"/>
 <text x="-10.16" y="0" size="2.54" layer="94">ADS1252</text>
+</symbol>
+<symbol name="REF3125">
+<wire x1="-10.16" y1="7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<pin name="VIN" x="-15.24" y="0" length="middle"/>
+<pin name="VOUT" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="GND" x="0" y="-12.7" length="middle" rot="R90"/>
+</symbol>
+<symbol name="OPA353">
+<wire x1="10.16" y1="0" x2="-10.16" y2="20.32" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="20.32" x2="-10.16" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-20.32" x2="10.16" y2="0" width="0.254" layer="94"/>
+<pin name="VOUT" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="V-" x="0" y="-15.24" length="middle" rot="R90"/>
+<pin name="VIN+" x="-15.24" y="7.62" length="middle"/>
+<pin name="VIN-" x="-15.24" y="-7.62" length="middle"/>
+<pin name="V+" x="0" y="15.24" length="middle" rot="R270"/>
+<text x="-7.62" y="0" size="2.1844" layer="94">OPA353</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -328,6 +357,42 @@
 <connect gate="G$1" pin="VIN+" pad="P$1"/>
 <connect gate="G$1" pin="VIN-" pad="P$2"/>
 <connect gate="G$1" pin="VREF" pad="P$8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="REF3125">
+<gates>
+<gate name="G$1" symbol="REF3125" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23-3">
+<connects>
+<connect gate="G$1" pin="GND" pad="P$3"/>
+<connect gate="G$1" pin="VIN" pad="P$1"/>
+<connect gate="G$1" pin="VOUT" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="OPA353">
+<gates>
+<gate name="G$1" symbol="OPA353" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23-5">
+<connects>
+<connect gate="G$1" pin="V+" pad="P$5"/>
+<connect gate="G$1" pin="V-" pad="P$2"/>
+<connect gate="G$1" pin="VIN+" pad="P$3"/>
+<connect gate="G$1" pin="VIN-" pad="P$4"/>
+<connect gate="G$1" pin="VOUT" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
