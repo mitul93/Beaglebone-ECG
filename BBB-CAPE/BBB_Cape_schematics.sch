@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
@@ -2652,10 +2652,10 @@ BBH1 outdated, use BBH2 or BBH3 only</description>
 <library name="Components">
 <packages>
 <package name="INA129">
-<wire x1="2" y1="2.5" x2="-2" y2="2.5" width="0.127" layer="21"/>
-<wire x1="-2" y1="2.5" x2="-2" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="-2" y1="-2.5" x2="2" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="2" y1="-2.5" x2="2" y2="2.5" width="0.127" layer="21"/>
+<wire x1="2" y1="2.5" x2="-2" y2="2.5" width="0.127" layer="51"/>
+<wire x1="-2" y1="2.5" x2="-2" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="-2" y1="-2.5" x2="2" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="2" y1="-2.5" x2="2" y2="2.5" width="0.127" layer="51"/>
 <smd name="P$2" x="-2.4" y="0.615" dx="1.4224" dy="0.7112" layer="1"/>
 <smd name="P$1" x="-2.4" y="1.885" dx="1.4224" dy="0.7112" layer="1"/>
 <smd name="P$3" x="-2.4" y="-0.615" dx="1.4224" dy="0.7112" layer="1"/>
@@ -2664,6 +2664,8 @@ BBH1 outdated, use BBH2 or BBH3 only</description>
 <smd name="P$7" x="2.4" y="0.615" dx="1.4224" dy="0.7112" layer="1"/>
 <smd name="P$6" x="2.4" y="-0.615" dx="1.4224" dy="0.7112" layer="1"/>
 <smd name="P$5" x="2.4" y="-1.885" dx="1.4224" dy="0.7112" layer="1"/>
+<wire x1="-1.905" y1="2.8575" x2="-2.54" y2="2.8575" width="0.127" layer="21"/>
+<wire x1="-2.2225" y1="3.175" x2="-2.2225" y2="2.54" width="0.127" layer="21"/>
 </package>
 <package name="SOT23-5">
 <wire x1="-1.525" y1="-0.875" x2="1.525" y2="-0.875" width="0.127" layer="51"/>
@@ -10675,8 +10677,8 @@ Sourc: www.ctscorp.com</description>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="U$14" library="Components" deviceset="LMP2021" device=""/>
 <part name="U$15" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="U$16" library="Components" deviceset="PAD" device=""/>
 <part name="U$17" library="Components" deviceset="PAD" device=""/>
+<part name="U$16" library="Components" deviceset="PAD" device=""/>
 <part name="U$18" library="Components" deviceset="PAD" device=""/>
 <part name="U$19" library="Components" deviceset="ADS1252" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="+5V/2" device=""/>
@@ -10963,10 +10965,11 @@ Sourc: www.ctscorp.com</description>
 <pinref part="IC1" gate="G$1" pin="SDA"/>
 <label x="99.06" y="215.9" size="1.778" layer="95"/>
 <wire x1="96.52" y1="215.9" x2="139.7" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="226.06" x2="139.7" y2="215.9" width="0.1524" layer="91"/>
 <label x="142.24" y="215.9" size="0.8128" layer="95" xref="yes"/>
+<pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="139.7" y1="215.9" x2="142.24" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="226.06" x2="139.7" y2="215.9" width="0.1524" layer="91"/>
+<junction x="139.7" y="215.9"/>
 </segment>
 </net>
 <net name="I2C2_SCL" class="0">
@@ -11101,8 +11104,8 @@ Sourc: www.ctscorp.com</description>
 <instance part="SUPPLY6" gate="G$1" x="287.02" y="165.1" rot="R180"/>
 <instance part="P+10" gate="1" x="307.34" y="200.66"/>
 <instance part="GND19" gate="1" x="307.34" y="160.02"/>
-<instance part="U$16" gate="G$1" x="68.58" y="205.74"/>
-<instance part="U$17" gate="G$1" x="68.58" y="170.18"/>
+<instance part="U$17" gate="G$1" x="68.58" y="205.74"/>
+<instance part="U$16" gate="G$1" x="68.58" y="170.18"/>
 <instance part="U$18" gate="G$1" x="45.72" y="50.8"/>
 <instance part="TP_ECG_LPF" gate="G$1" x="330.2" y="172.72" rot="R270"/>
 <instance part="TP_ECG_INA" gate="G$1" x="220.98" y="195.58"/>
@@ -11218,11 +11221,6 @@ Sourc: www.ctscorp.com</description>
 <wire x1="132.08" y1="223.52" x2="132.08" y2="213.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C3" gate="G$1" pin="2"/>
-<pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="121.92" y1="154.94" x2="121.92" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="213.36" y1="149.86" x2="213.36" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="152.4" x2="220.98" y2="152.4" width="0.1524" layer="91"/>
@@ -11256,6 +11254,11 @@ Sourc: www.ctscorp.com</description>
 <pinref part="JP5" gate="1" pin="3"/>
 <pinref part="GND27" gate="1" pin="GND"/>
 <wire x1="187.96" y1="147.32" x2="187.96" y2="144.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+<wire x1="121.92" y1="154.94" x2="121.92" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -11493,14 +11496,14 @@ Sourc: www.ctscorp.com</description>
 </net>
 <net name="N$23" class="0">
 <segment>
-<pinref part="U$16" gate="G$1" pin="P$1"/>
+<pinref part="U$17" gate="G$1" pin="P$1"/>
 <pinref part="R11" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="205.74" x2="91.44" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$24" class="0">
 <segment>
-<pinref part="U$17" gate="G$1" pin="P$1"/>
+<pinref part="U$16" gate="G$1" pin="P$1"/>
 <pinref part="R12" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="170.18" x2="91.44" y2="170.18" width="0.1524" layer="91"/>
 </segment>
@@ -12040,7 +12043,18 @@ Sourc: www.ctscorp.com</description>
 <approved hash="104,1,71.12,215.9,IC1,VSS,GND,,,"/>
 <approved hash="104,1,96.52,223.52,IC1,VCC,3.3V,,,"/>
 <approved hash="104,1,48.26,76.2,BB1P9,5V_RAW,5V,,,"/>
+<approved hash="204,1,48.26,73.66,BB1P9,5V_SYS,,,,"/>
+<approved hash="202,1,48.26,71.12,BB1P9,!PWR_BUT,,,,"/>
+<approved hash="202,1,48.26,40.64,BB1P9,AIN4,,,,"/>
+<approved hash="202,1,48.26,38.1,BB1P9,AIN6,,,,"/>
+<approved hash="202,1,48.26,35.56,BB1P9,AIN2,,,,"/>
+<approved hash="202,1,48.26,33.02,BB1P9,AIN0,,,,"/>
 <approved hash="104,1,109.22,76.2,BB1P9,5V_RAW,5V,,,"/>
+<approved hash="204,1,109.22,73.66,BB1P9,5V_SYS,,,,"/>
+<approved hash="202,1,109.22,71.12,BB1P9,!SYS_RST,,,,"/>
+<approved hash="202,1,109.22,38.1,BB1P9,AIN5,,,,"/>
+<approved hash="202,1,109.22,35.56,BB1P9,AIN3,,,,"/>
+<approved hash="202,1,109.22,33.02,BB1P9,AIN1,,,,"/>
 <approved hash="115,2,220.98,179.201,JP1,,,,,"/>
 <approved hash="115,2,259.08,187.829,JP3,,,,,"/>
 <approved hash="115,2,304.8,218.309,JP4,,,,,"/>
