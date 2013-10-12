@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
@@ -2755,6 +2755,28 @@ BBH1 outdated, use BBH2 or BBH3 only</description>
 <wire x1="-6.5" y1="1" x2="-6.5" y2="2.5" width="0.127" layer="21"/>
 <wire x1="-6.5" y1="2.5" x2="6.5" y2="2.5" width="0.127" layer="21"/>
 </package>
+<package name="LCD_4D">
+<wire x1="3.5" y1="40" x2="116.9" y2="40" width="0.127" layer="51"/>
+<wire x1="116.9" y1="40" x2="116.9" y2="-40" width="0.127" layer="51"/>
+<wire x1="116.9" y1="-40" x2="3.5" y2="-40" width="0.127" layer="51"/>
+<wire x1="3.5" y1="-40" x2="3.5" y2="-35.5" width="0.127" layer="51"/>
+<circle x="1.75" y="33.5" radius="1.75" width="0.127" layer="51"/>
+<circle x="1.75" y="-33.5" radius="1.75" width="0.127" layer="51"/>
+<circle x="118.65" y="33.5" radius="1.75" width="0.127" layer="51"/>
+<circle x="118.65" y="-33.5" radius="1.75" width="0.127" layer="51"/>
+<wire x1="3.5" y1="-35.5" x2="3.5" y2="-31.5" width="0.127" layer="51"/>
+<wire x1="3.5" y1="-31.5" x2="3.5" y2="31.5" width="0.127" layer="51"/>
+<wire x1="3.5" y1="31.5" x2="3.5" y2="35.5" width="0.127" layer="51"/>
+<wire x1="3.5" y1="35.5" x2="3.5" y2="40" width="0.127" layer="51"/>
+<wire x1="3.5" y1="35.5" x2="3.5" y2="31.5" width="0.127" layer="51" curve="262.37185"/>
+<wire x1="3.5" y1="-31.5" x2="3.5" y2="-35.5" width="0.127" layer="51" curve="262.37185"/>
+<wire x1="117" y1="-31.5" x2="117" y2="-35.5" width="0.127" layer="51" curve="-262.37185"/>
+<wire x1="117" y1="35.5" x2="117" y2="31.5" width="0.127" layer="51" curve="-262.37185"/>
+<dimension x1="1.75" y1="35.25" x2="1.75" y2="31.75" x3="6.75" y3="33.5" layer="21" dtype="diameter"/>
+<wire x1="17.02" y1="33.5" x2="33.5" y2="33.5" width="0.127" layer="51" style="longdash"/>
+<wire x1="33.5" y1="33.5" x2="116.25" y2="33.5" width="0.127" layer="51" style="longdash"/>
+<wire x1="17.02" y1="33.5" x2="17.02" y2="-37.5" width="0.127" layer="51" style="longdash"/>
+</package>
 </packages>
 <symbols>
 <symbol name="INA129">
@@ -2859,6 +2881,13 @@ BBH1 outdated, use BBH2 or BBH3 only</description>
 <wire x1="5.08" y1="5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
 <pin name="X1" x="-7.62" y="0" length="middle"/>
 <pin name="X2" x="10.16" y="0" length="middle" rot="R180"/>
+</symbol>
+<symbol name="LCD_4D">
+<wire x1="15.24" y1="25.4" x2="15.24" y2="-25.4" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-25.4" x2="-15.24" y2="-25.4" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-25.4" x2="-15.24" y2="25.4" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="25.4" x2="15.24" y2="25.4" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="2.1844" layer="94">LCD_4D</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -3027,6 +3056,18 @@ BBH1 outdated, use BBH2 or BBH3 only</description>
 <connect gate="G$1" pin="X1" pad="P$1"/>
 <connect gate="G$1" pin="X2" pad="P$2"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LCD_4D">
+<gates>
+<gate name="G$1" symbol="LCD_4D" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LCD_4D">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -10739,6 +10780,7 @@ Sourc: www.ctscorp.com</description>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
 <part name="C12" library="rcl" deviceset="C-US" device="C1206" value="0.10uF"/>
 <part name="GND30" library="supply1" deviceset="GND" device=""/>
+<part name="U$25" library="Components" deviceset="LCD_4D" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10813,6 +10855,7 @@ Sourc: www.ctscorp.com</description>
 <attribute name="TP_SIGNAL_NAME" x="130.81" y="67.31" size="1.778" layer="97" rot="R270"/>
 </instance>
 <instance part="SW2" gate="G$1" x="33.02" y="210.82" rot="R270"/>
+<instance part="U$25" gate="G$1" x="269.24" y="142.24"/>
 </instances>
 <busses>
 </busses>
