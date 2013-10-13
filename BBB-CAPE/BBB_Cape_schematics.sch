@@ -10737,13 +10737,13 @@ Sourc: www.ctscorp.com</description>
 <part name="U$24" library="Components" deviceset="PAD" device=""/>
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
 <part name="JP5" library="jumper" deviceset="JP2E" device=""/>
-<part name="P+14" library="supply1" deviceset="+5V" device=""/>
 <part name="C12" library="rcl" deviceset="C-US" device="C1206" value="0.10uF"/>
 <part name="GND30" library="supply1" deviceset="GND" device=""/>
 <part name="U$25" library="Components" deviceset="LCD_4D" device=""/>
 <part name="C17" library="rcl" deviceset="C-US" device="C1206" value="22pF"/>
 <part name="C22" library="rcl" deviceset="C-US" device="C1206" value="22pF"/>
 <part name="U$26" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="U$27" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11715,10 +11715,10 @@ Sourc: www.ctscorp.com</description>
 <attribute name="VALUE" x="277.622" y="184.15" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="P+13" gate="G$1" x="248.92" y="203.2"/>
-<instance part="P+14" gate="1" x="162.56" y="50.8" rot="R180"/>
 <instance part="C12" gate="G$1" x="170.18" y="63.5" rot="R90"/>
 <instance part="GND30" gate="1" x="177.8" y="55.88"/>
 <instance part="U$26" gate="G$1" x="53.34" y="86.36"/>
+<instance part="U$27" gate="G$1" x="162.56" y="53.34" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -11860,16 +11860,14 @@ Sourc: www.ctscorp.com</description>
 <wire x1="53.34" y1="86.36" x2="53.34" y2="76.2" width="0.1524" layer="91"/>
 <junction x="53.34" y="76.2"/>
 </segment>
-</net>
-<net name="+5V" class="0">
 <segment>
 <pinref part="U$22" gate="G$1" pin="V+"/>
-<pinref part="P+14" gate="1" pin="+5V"/>
 <wire x1="162.56" y1="68.58" x2="162.56" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="1"/>
 <wire x1="162.56" y1="63.5" x2="162.56" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="63.5" x2="162.56" y2="63.5" width="0.1524" layer="91"/>
 <junction x="162.56" y="63.5"/>
+<pinref part="U$27" gate="G$1" pin="5V"/>
 </segment>
 </net>
 <net name="+5V/2" class="0">
