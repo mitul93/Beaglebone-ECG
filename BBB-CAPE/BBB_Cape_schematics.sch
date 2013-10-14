@@ -11085,7 +11085,7 @@ Sourc: www.ctscorp.com</description>
 </instance>
 <instance part="R18" gate="G$1" x="307.34" y="208.28" rot="R180"/>
 <instance part="SUPPLY6" gate="G$1" x="287.02" y="165.1" rot="R180"/>
-<instance part="GND19" gate="1" x="307.34" y="160.02"/>
+<instance part="GND19" gate="1" x="314.96" y="195.58"/>
 <instance part="U$17" gate="G$1" x="68.58" y="205.74"/>
 <instance part="U$16" gate="G$1" x="68.58" y="170.18"/>
 <instance part="U$18" gate="G$1" x="45.72" y="50.8"/>
@@ -11141,7 +11141,7 @@ Sourc: www.ctscorp.com</description>
 <instance part="U$29" gate="G$1" x="160.02" y="142.24"/>
 <instance part="U$30" gate="G$1" x="215.9" y="104.14" rot="R180"/>
 <instance part="U$31" gate="G$1" x="182.88" y="215.9"/>
-<instance part="U$32" gate="G$1" x="307.34" y="198.12"/>
+<instance part="U$32" gate="G$1" x="307.34" y="162.56" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -11237,11 +11237,6 @@ Sourc: www.ctscorp.com</description>
 <wire x1="99.06" y1="73.66" x2="99.06" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$13" gate="G$1" pin="V+"/>
-<pinref part="GND19" gate="1" pin="GND"/>
-<wire x1="307.34" y1="165.1" x2="307.34" y2="162.56" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U$24" gate="G$1" pin="P$1"/>
 <wire x1="86.36" y1="139.7" x2="93.98" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="GND28" gate="1" pin="GND"/>
@@ -11261,6 +11256,13 @@ Sourc: www.ctscorp.com</description>
 <wire x1="104.14" y1="154.94" x2="104.14" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="152.4" x2="121.92" y2="152.4" width="0.1524" layer="91"/>
 <junction x="121.92" y="152.4"/>
+</segment>
+<segment>
+<pinref part="U$13" gate="G$1" pin="V-"/>
+<wire x1="307.34" y1="195.58" x2="307.34" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="GND19" gate="1" pin="GND"/>
+<wire x1="307.34" y1="200.66" x2="314.96" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="200.66" x2="314.96" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -11629,9 +11631,9 @@ Sourc: www.ctscorp.com</description>
 <wire x1="215.9" y1="114.3" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$13" gate="G$1" pin="V-"/>
+<pinref part="U$13" gate="G$1" pin="V+"/>
 <pinref part="U$32" gate="G$1" pin="5V"/>
-<wire x1="307.34" y1="195.58" x2="307.34" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="165.1" x2="307.34" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
