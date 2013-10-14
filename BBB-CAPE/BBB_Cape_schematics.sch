@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -198,31 +198,12 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="+5V">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="+5V" prefix="P+">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="+5V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -10652,14 +10633,11 @@ Sourc: www.ctscorp.com</description>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="U$7" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="SUPPLY1" library="supply2" deviceset="-5V" device=""/>
-<part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="-5V" device=""/>
-<part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="C8" library="rcl" deviceset="C-US" device="C1206" value="1uF"/>
 <part name="R13" library="resistor" deviceset="R-EU_" device="M1206" value="316k"/>
 <part name="U$9" library="Components" deviceset="OPA335" device=""/>
 <part name="U$11" library="Components" deviceset="OPA335" device=""/>
-<part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="U$12" library="Components" deviceset="OPA335" device=""/>
@@ -10668,14 +10646,12 @@ Sourc: www.ctscorp.com</description>
 <part name="R16" library="resistor" deviceset="R-EU_" device="M1206" value="390k"/>
 <part name="C9" library="rcl" deviceset="C-US" device="C1206" value="47pF"/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="P+8" library="supply1" deviceset="+5V" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="+5V/2" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="+5V/2" device=""/>
 <part name="U$13" library="Components" deviceset="OPA335" device=""/>
 <part name="R17" library="resistor" deviceset="R-EU_" device="M1206" value="1.24k"/>
 <part name="R18" library="resistor" deviceset="R-EU_" device="M1206" value="1M"/>
 <part name="SUPPLY6" library="supply2" deviceset="+5V/2" device=""/>
-<part name="P+10" library="supply1" deviceset="+5V" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="U$14" library="Components" deviceset="OPA335" device=""/>
 <part name="U$15" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
@@ -10744,6 +10720,11 @@ Sourc: www.ctscorp.com</description>
 <part name="C22" library="rcl" deviceset="C-US" device="C1206" value="22pF"/>
 <part name="U$26" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="U$27" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="U$28" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="U$29" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="U$30" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="U$31" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="U$32" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11079,9 +11060,7 @@ Sourc: www.ctscorp.com</description>
 <attribute name="VALUE" x="92.71" y="202.438" size="1.778" layer="96"/>
 </instance>
 <instance part="R12" gate="G$1" x="96.52" y="170.18"/>
-<instance part="P+3" gate="1" x="182.88" y="210.82"/>
 <instance part="SUPPLY2" gate="-5V" x="182.88" y="162.56"/>
-<instance part="P+4" gate="1" x="215.9" y="101.6" rot="R180"/>
 <instance part="C8" gate="G$1" x="218.44" y="160.02" rot="R90"/>
 <instance part="R13" gate="G$1" x="236.22" y="177.8" smashed="yes">
 <attribute name="NAME" x="227.33" y="176.7586" size="1.778" layer="95"/>
@@ -11089,7 +11068,6 @@ Sourc: www.ctscorp.com</description>
 </instance>
 <instance part="U$9" gate="G$1" x="215.9" y="129.54" rot="R180"/>
 <instance part="U$11" gate="G$1" x="160.02" y="114.3"/>
-<instance part="P+5" gate="1" x="160.02" y="139.7"/>
 <instance part="GND13" gate="1" x="160.02" y="91.44"/>
 <instance part="GND15" gate="1" x="205.74" y="147.32"/>
 <instance part="U$12" gate="G$1" x="99.06" y="50.8" rot="R180"/>
@@ -11098,7 +11076,6 @@ Sourc: www.ctscorp.com</description>
 <instance part="R16" gate="G$1" x="73.66" y="50.8"/>
 <instance part="C9" gate="G$1" x="104.14" y="91.44" rot="R270"/>
 <instance part="GND16" gate="1" x="93.98" y="68.58"/>
-<instance part="P+8" gate="1" x="99.06" y="25.4" rot="R180"/>
 <instance part="SUPPLY4" gate="G$1" x="124.46" y="33.02" rot="R180"/>
 <instance part="SUPPLY5" gate="G$1" x="243.84" y="109.22" rot="R180"/>
 <instance part="U$13" gate="G$1" x="307.34" y="180.34" rot="MR180"/>
@@ -11108,7 +11085,6 @@ Sourc: www.ctscorp.com</description>
 </instance>
 <instance part="R18" gate="G$1" x="307.34" y="208.28" rot="R180"/>
 <instance part="SUPPLY6" gate="G$1" x="287.02" y="165.1" rot="R180"/>
-<instance part="P+10" gate="1" x="307.34" y="200.66"/>
 <instance part="GND19" gate="1" x="307.34" y="160.02"/>
 <instance part="U$17" gate="G$1" x="68.58" y="205.74"/>
 <instance part="U$16" gate="G$1" x="68.58" y="170.18"/>
@@ -11161,6 +11137,11 @@ Sourc: www.ctscorp.com</description>
 <instance part="JP5" gate="1" x="185.42" y="149.86"/>
 <instance part="C17" gate="G$1" x="104.14" y="215.9" rot="R180"/>
 <instance part="C22" gate="G$1" x="104.14" y="160.02"/>
+<instance part="U$28" gate="G$1" x="99.06" y="25.4" rot="R180"/>
+<instance part="U$29" gate="G$1" x="160.02" y="142.24"/>
+<instance part="U$30" gate="G$1" x="215.9" y="104.14" rot="R180"/>
+<instance part="U$31" gate="G$1" x="182.88" y="215.9"/>
+<instance part="U$32" gate="G$1" x="307.34" y="198.12"/>
 </instances>
 <busses>
 </busses>
@@ -11174,8 +11155,6 @@ Sourc: www.ctscorp.com</description>
 <wire x1="121.92" y1="205.74" x2="160.02" y2="205.74" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="193.04" x2="121.92" y2="205.74" width="0.1524" layer="91"/>
 <junction x="121.92" y="205.74"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="213.36" x2="121.92" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -11187,8 +11166,6 @@ Sourc: www.ctscorp.com</description>
 <wire x1="121.92" y1="170.18" x2="116.84" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="185.42" x2="121.92" y2="170.18" width="0.1524" layer="91"/>
 <junction x="121.92" y="170.18"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="162.56" x2="121.92" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -11305,33 +11282,6 @@ Sourc: www.ctscorp.com</description>
 <pinref part="U$4" gate="G$1" pin="V-"/>
 <pinref part="SUPPLY2" gate="-5V" pin="-5V"/>
 <wire x1="182.88" y1="170.18" x2="182.88" y2="165.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="+5V" class="0">
-<segment>
-<pinref part="P+3" gate="1" pin="+5V"/>
-<pinref part="U$4" gate="G$1" pin="V+"/>
-<wire x1="182.88" y1="208.28" x2="182.88" y2="205.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="215.9" y1="104.14" x2="215.9" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="U$9" gate="G$1" pin="V+"/>
-</segment>
-<segment>
-<pinref part="P+5" gate="1" pin="+5V"/>
-<pinref part="U$11" gate="G$1" pin="V+"/>
-<wire x1="160.02" y1="137.16" x2="160.02" y2="129.54" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+8" gate="1" pin="+5V"/>
-<pinref part="U$12" gate="G$1" pin="V+"/>
-<wire x1="99.06" y1="27.94" x2="99.06" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+10" gate="1" pin="+5V"/>
-<pinref part="U$13" gate="G$1" pin="V-"/>
-<wire x1="307.34" y1="198.12" x2="307.34" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -11647,6 +11597,45 @@ Sourc: www.ctscorp.com</description>
 <pinref part="R15" gate="G$1" pin="1"/>
 <wire x1="81.28" y1="81.28" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="81.28" x2="81.28" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="5V" class="0">
+<segment>
+<pinref part="U$28" gate="G$1" pin="5V"/>
+<pinref part="U$12" gate="G$1" pin="V+"/>
+<wire x1="99.06" y1="25.4" x2="99.06" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$29" gate="G$1" pin="5V"/>
+<pinref part="U$11" gate="G$1" pin="V+"/>
+<wire x1="160.02" y1="142.24" x2="160.02" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$31" gate="G$1" pin="5V"/>
+<pinref part="U$4" gate="G$1" pin="V+"/>
+<wire x1="182.88" y1="215.9" x2="182.88" y2="205.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$9" gate="G$1" pin="V+"/>
+<pinref part="U$30" gate="G$1" pin="5V"/>
+<wire x1="215.9" y1="114.3" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$13" gate="G$1" pin="V-"/>
+<pinref part="U$32" gate="G$1" pin="5V"/>
+<wire x1="307.34" y1="195.58" x2="307.34" y2="198.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="121.92" y1="213.36" x2="121.92" y2="205.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$36" class="0">
+<segment>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="121.92" y1="162.56" x2="121.92" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
