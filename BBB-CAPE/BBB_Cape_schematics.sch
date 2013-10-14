@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -11156,6 +11156,10 @@ Sourc: www.ctscorp.com</description>
 <wire x1="121.92" y1="193.04" x2="121.92" y2="205.74" width="0.1524" layer="91"/>
 <junction x="121.92" y="205.74"/>
 </segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="121.92" y1="213.36" x2="121.92" y2="205.74" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$2" class="0">
 <segment>
@@ -11166,6 +11170,10 @@ Sourc: www.ctscorp.com</description>
 <wire x1="121.92" y1="170.18" x2="116.84" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="185.42" x2="121.92" y2="170.18" width="0.1524" layer="91"/>
 <junction x="121.92" y="170.18"/>
+</segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="121.92" y1="162.56" x2="121.92" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -11626,18 +11634,6 @@ Sourc: www.ctscorp.com</description>
 <wire x1="307.34" y1="195.58" x2="307.34" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$20" class="0">
-<segment>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="213.36" x2="121.92" y2="205.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$36" class="0">
-<segment>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="162.56" x2="121.92" y2="170.18" width="0.1524" layer="91"/>
-</segment>
-</net>
 </nets>
 </sheet>
 <sheet>
@@ -12067,10 +12063,26 @@ Sourc: www.ctscorp.com</description>
 <approved hash="202,1,109.22,33.02,BB1P9,AIN1,,,,"/>
 <approved hash="108,2,81.28,81.28,N$19,,,,,"/>
 <approved hash="108,2,81.28,50.8,N$19,,,,,"/>
+<approved hash="109,2,121.92,205.74,N$1,,,,,"/>
+<approved hash="109,2,121.92,205.74,N$1,,,,,"/>
+<approved hash="109,2,121.92,205.74,N$1,,,,,"/>
+<approved hash="109,2,121.92,205.74,N$1,,,,,"/>
+<approved hash="109,2,121.92,205.74,N$1,,,,,"/>
+<approved hash="109,2,121.92,205.74,N$1,,,,,"/>
+<approved hash="109,2,121.92,170.18,N$2,,,,,"/>
+<approved hash="109,2,121.92,170.18,N$2,,,,,"/>
+<approved hash="109,2,121.92,170.18,N$2,,,,,"/>
+<approved hash="109,2,121.92,170.18,N$2,,,,,"/>
+<approved hash="109,2,121.92,170.18,N$2,,,,,"/>
+<approved hash="109,2,121.92,170.18,N$2,,,,,"/>
 <approved hash="115,2,220.98,179.201,JP1,,,,,"/>
 <approved hash="115,2,259.08,187.829,JP3,,,,,"/>
 <approved hash="115,2,304.8,218.309,JP4,,,,,"/>
 <approved hash="115,2,184.539,149.012,JP5,,,,,"/>
+<approved hash="117,2,121.92,209.55,N$1,,,,,"/>
+<approved hash="117,2,119.38,205.74,N$1,,,,,"/>
+<approved hash="117,2,121.92,166.37,N$2,,,,,"/>
+<approved hash="117,2,140.97,170.18,N$2,,,,,"/>
 </errors>
 </schematic>
 </drawing>
