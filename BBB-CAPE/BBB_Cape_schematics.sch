@@ -10528,7 +10528,6 @@ Sourc: www.ctscorp.com</description>
 <part name="R20" library="resistor" deviceset="R-EU_" device="M1206" value="10k"/>
 <part name="R21" library="resistor" deviceset="R-EU_" device="M1206" value="10k"/>
 <part name="P+13" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="R22" library="resistor" deviceset="R-EU_" device="M1206" value="3M"/>
 <part name="R23" library="resistor" deviceset="R-EU_" device="M1206" value="80.6k"/>
 <part name="GND27" library="supply1" deviceset="GND" device=""/>
 <part name="R24" library="resistor" deviceset="R-EU_" device="M1206" value="2.49k"/>
@@ -10556,7 +10555,6 @@ Sourc: www.ctscorp.com</description>
 <part name="TP3" library="testpad" deviceset="TP" device="B2,54"/>
 <part name="TP4" library="testpad" deviceset="TP" device="B2,54"/>
 <part name="TP5" library="testpad" deviceset="TP" device="B2,54"/>
-<part name="SJ1" library="jumper" deviceset="SJ" device="W"/>
 <part name="SJ2" library="jumper" deviceset="SJ" device="W"/>
 <part name="SJ3" library="jumper" deviceset="SJ" device="W"/>
 <part name="SJ4" library="jumper" deviceset="SJ" device="W"/>
@@ -10936,10 +10934,6 @@ Sourc: www.ctscorp.com</description>
 <instance part="TP_ECG_LPF" gate="G$1" x="330.2" y="172.72" rot="R270"/>
 <instance part="TP_ECG_INA" gate="G$1" x="220.98" y="195.58"/>
 <instance part="TP_INA_VREF" gate="G$1" x="175.26" y="129.54" rot="R90"/>
-<instance part="R22" gate="G$1" x="236.22" y="180.34" smashed="yes">
-<attribute name="NAME" x="227.33" y="179.2986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="240.03" y="179.578" size="1.778" layer="96"/>
-</instance>
 <instance part="R23" gate="G$1" x="236.22" y="175.26" smashed="yes">
 <attribute name="NAME" x="227.33" y="174.2186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="240.03" y="174.498" size="1.778" layer="96"/>
@@ -10982,7 +10976,6 @@ Sourc: www.ctscorp.com</description>
 <instance part="U$30" gate="G$1" x="215.9" y="104.14" rot="R180"/>
 <instance part="U$31" gate="G$1" x="182.88" y="215.9"/>
 <instance part="U$32" gate="G$1" x="307.34" y="162.56" rot="R180"/>
-<instance part="SJ1" gate="1" x="220.98" y="180.34"/>
 <instance part="SJ2" gate="1" x="220.98" y="177.8"/>
 <instance part="SJ3" gate="1" x="220.98" y="175.26"/>
 <instance part="SJ4" gate="1" x="259.08" y="193.04"/>
@@ -11171,18 +11164,14 @@ Sourc: www.ctscorp.com</description>
 <pinref part="TP_ECG_INA" gate="G$1" pin="TP"/>
 <wire x1="210.82" y1="187.96" x2="220.98" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="193.04" x2="220.98" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="187.96" x2="210.82" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="187.96" x2="210.82" y2="177.8" width="0.1524" layer="91"/>
 <junction x="210.82" y="187.96"/>
 <pinref part="SJ3" gate="1" pin="1"/>
-<wire x1="210.82" y1="180.34" x2="210.82" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="177.8" x2="210.82" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="175.26" x2="215.9" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="SJ2" gate="1" pin="1"/>
 <wire x1="215.9" y1="177.8" x2="210.82" y2="177.8" width="0.1524" layer="91"/>
 <junction x="210.82" y="177.8"/>
-<pinref part="SJ1" gate="1" pin="1"/>
-<wire x1="215.9" y1="180.34" x2="210.82" y2="180.34" width="0.1524" layer="91"/>
-<junction x="210.82" y="180.34"/>
 <wire x1="220.98" y1="187.96" x2="248.92" y2="187.96" width="0.1524" layer="91"/>
 <junction x="220.98" y="187.96"/>
 <wire x1="248.92" y1="187.96" x2="248.92" y2="190.5" width="0.1524" layer="91"/>
@@ -11207,15 +11196,11 @@ Sourc: www.ctscorp.com</description>
 <wire x1="223.52" y1="160.02" x2="243.84" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="U$9" gate="G$1" pin="VIN-"/>
 <wire x1="243.84" y1="137.16" x2="231.14" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="R22" gate="G$1" pin="2"/>
-<wire x1="241.3" y1="180.34" x2="243.84" y2="180.34" width="0.1524" layer="91"/>
-<wire x1="243.84" y1="180.34" x2="243.84" y2="177.8" width="0.1524" layer="91"/>
 <junction x="243.84" y="160.02"/>
 <pinref part="R13" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="177.8" x2="243.84" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="175.26" x2="243.84" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="177.8" x2="243.84" y2="177.8" width="0.1524" layer="91"/>
-<junction x="243.84" y="177.8"/>
 <pinref part="R23" gate="G$1" pin="2"/>
 <wire x1="241.3" y1="175.26" x2="243.84" y2="175.26" width="0.1524" layer="91"/>
 <junction x="243.84" y="175.26"/>
@@ -11414,13 +11399,6 @@ Sourc: www.ctscorp.com</description>
 <pinref part="U$13" gate="G$1" pin="V+"/>
 <pinref part="U$32" gate="G$1" pin="5V"/>
 <wire x1="307.34" y1="165.1" x2="307.34" y2="162.56" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$32" class="0">
-<segment>
-<pinref part="SJ1" gate="1" pin="2"/>
-<pinref part="R22" gate="G$1" pin="1"/>
-<wire x1="226.06" y1="180.34" x2="231.14" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$33" class="0">
