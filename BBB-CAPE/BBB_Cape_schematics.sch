@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -10258,7 +10258,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SUPPLY4" library="supply2" deviceset="+5V/2" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="+5V/2" device=""/>
 <part name="U13" library="Components" deviceset="OPA335" device=""/>
-<part name="R17" library="resistor" deviceset="R-EU_" device="M1206" value="1.24k"/>
+<part name="R17" library="resistor" deviceset="R-EU_" device="M1206" value="2.49k"/>
 <part name="R18" library="resistor" deviceset="R-EU_" device="M1206" value="1M"/>
 <part name="SUPPLY6" library="supply2" deviceset="+5V/2" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
@@ -10283,7 +10283,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="C13" library="rcl" deviceset="C-US" device="C1206" value="0.1uF"/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
-<part name="R19" library="resistor" deviceset="R-EU_" device="M1206" value="100k"/>
+<part name="R19" library="resistor" deviceset="R-EU_" device="M1206" value="10k"/>
 <part name="C14" library="rcl" deviceset="C-US" device="C1206" value="0.1uF"/>
 <part name="C15" library="rcl" deviceset="C-US" device="C1206" value="10uF"/>
 <part name="C16" library="rcl" deviceset="C-US" device="C1206" value="0.1uF"/>
@@ -10304,11 +10304,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="P+13" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="R23" library="resistor" deviceset="R-EU_" device="M1206" value="80.6k"/>
 <part name="GND27" library="supply1" deviceset="GND" device=""/>
-<part name="R24" library="resistor" deviceset="R-EU_" device="M1206" value="2.49k"/>
+<part name="R24" library="resistor" deviceset="R-EU_" device="M1206" value="4.99k"/>
 <part name="R26" library="resistor" deviceset="R-EU_" device="M1206" value="0.825k"/>
 <part name="C10" library="rcl" deviceset="C-US" device="C1206" value="0.0015uF"/>
-<part name="C20" library="rcl" deviceset="C-US" device="C1206" value="0.0015uF"/>
-<part name="C21" library="rcl" deviceset="C-US" device="C1206" value="0.0015uF"/>
+<part name="C20" library="rcl" deviceset="C-US" device="C1206" value="0.015uF"/>
+<part name="C21" library="rcl" deviceset="C-US" device="C1206" value="0.0047uF"/>
 <part name="RH_INDEX" library="Components" deviceset="PAD" device=""/>
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
 <part name="C12" library="rcl" deviceset="C-US" device="C1206" value="0.10uF"/>
